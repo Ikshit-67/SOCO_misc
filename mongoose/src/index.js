@@ -1,5 +1,6 @@
 require("./db/db.connection");
 
+
 const Invoice = require("./models/invoice.model")
 
 const trigger = async () => {
@@ -7,7 +8,7 @@ const trigger = async () => {
         {
             '$match': {
                 'timestamp': {
-                    '$gte': Date("2022-08-01T00:00:00Z")
+                    '$gte': new Date(2022,08,01)
                 }
             }
         }, {
@@ -24,4 +25,4 @@ const trigger = async () => {
     console.log(res);
 }
 
-trigger()
+trigger();
