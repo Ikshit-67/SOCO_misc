@@ -8,7 +8,7 @@ const trigger = async () => {
         {
             '$match': {
                 'timestamp': {
-                    '$gte': new Date(2022,08,01)
+                    '$gte': new Date(2022,07,00)
                 }
             }
         }, {
